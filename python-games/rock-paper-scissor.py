@@ -33,13 +33,13 @@ while True: # Main game loop
 
     if playerMove == 'R':
         print('Rock versus...')
-        playerMove == 'ROCK'
+        playerMove = 'ROCK'
     elif playerMove == 'S':
         print('Scissors versus...')
-        playerMove == 'SCISSORS'
+        playerMove = 'SCISSORS'
     elif playerMove == 'P':
         print('Paper versus...')
-        playerMove == 'PAPER'
+        playerMove = 'PAPER'
 
     # Count to three with dramatic pauses:
     time.sleep(0.5)
