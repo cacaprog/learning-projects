@@ -23,7 +23,10 @@ Female insurance costs are $ -1387.0 cheapter than man's costs
 
 2. What's the mean of cost per region for smokers and no smokers?
 
-
+The mean for smokers on Southwest: $ 32269.0
+The mean for smokers on Southeast: $ 34845.0
+The mean for smokers on Northwest: $ 30192.0
+The mean for smokers on Northeast: $ 29674.0
 
 
 
@@ -41,6 +44,8 @@ Female insurance costs are $ -1387.0 cheapter than man's costs
 
 quantitative: age, bmi, children, charges
 categorical: sex, smoker, region
+
+regions = southwest, southeast, northwest, northeast
 
 ### BMI ranges
 For most adults, an ideal BMI is in the 18.5 to 24.9 range.
