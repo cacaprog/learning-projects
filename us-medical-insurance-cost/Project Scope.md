@@ -1,18 +1,29 @@
 # Project Scope
 
 ## Goals
-Insurance cost are more expensive for women or men?
+1. Insurance cost are more expensive for women or men?
 
-What's the mean of cost per region for smokers and no smokers?
+2. What's the mean of cost per region for smokers and no smokers?
 
-How many people are obese (%)?
+3. How many people are obese (%)?
 
 Healthy people (BMI between 18.5 and 24.9, no smokers) with children pay more than unhealthy people without children?
 
-What features are the most influential for an individual’s medical insurance charges?
+4. What features are the most influential for an individual’s medical insurance charges?
 
 
 ## Analysis
+1. Insurance cost are more expensive for women or men?
+Let´s check it visual
+group by sex, then mean of costs per sex
+
+The costs mean for men: $ 13957.0
+The costs mean for women: $ 12570.0
+Female insurance costs are $ -1387.0 cheapter than man's costs
+
+2. What's the mean of cost per region for smokers and no smokers?
+
+
 
 
 
@@ -43,13 +54,11 @@ If your BMI is:
 - 30 or over – you're in the obese range
 
 
-
-
 ## Evaluation
 
 
-## Output
 
+## Output
 
 
 
