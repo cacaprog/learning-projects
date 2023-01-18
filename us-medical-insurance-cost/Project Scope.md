@@ -28,6 +28,22 @@ The mean for smokers on Southeast: $ 34845.0
 The mean for smokers on Northwest: $ 30192.0
 The mean for smokers on Northeast: $ 29674.0
 
+The mean for non-smokers on Southwest: $ 8019.0
+The mean for non-smokers on Southeast: $ 8032.0
+The mean for non-smokers on Northwest: $ 8556.0
+The mean for non-smokers on Northeast: $ 9166.0
+
+3. How many people are obese (%)?
+And how much they pay for insurance?
+
+16.59 % are healthy
+52.84 % of population have a BMI higher than 30
+
+The mean charges for obese people are $  15552.0
+
+
+4. What features are the most influential for an individual’s medical insurance charges?
+Age, bmi are correlated for charges.
 
 
 ## Data
