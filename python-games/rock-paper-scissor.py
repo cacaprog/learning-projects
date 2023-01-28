@@ -64,23 +64,23 @@ while True: # Main game loop
     # Display and record win / losses / ties
     if playerMove == computerMove:
         print('It\'s a tie!')
-        ties = ties + 1
+        ties += 1
     elif playerMove == 'ROCK' and computerMove == 'SCISSORS':
         print('You win!')
-        wins = wins + 1
+        wins += 1
     elif playerMove == 'PAPER' and computerMove == 'ROCK':
         print('You win!')
-        wins = wins + 1
+        wins += 1
     elif playerMove == 'SCISSORS' and computerMove == 'PAPER':
         print('You win!')
-        wins = wins + 1
+        wins += 1
     elif playerMove == 'ROCK' and computerMove == 'PAPER':
         print('You lose!')
-        losses = losses + 1
+        losses += 1
     elif playerMove == 'PAPER' and computerMove == 'SCISSORS':
         print('You lose!')
-        losses = losses + 1
+        losses += 1
     elif playerMove == 'SCISSORS' and computerMove == 'ROCK':
         print('You lose!')
-        losses = losses + 1
+        losses += 1
 
