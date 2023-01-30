@@ -18,7 +18,7 @@ MIN_X_INCREASE = 6
 MAX_X_INCREASE = 16
 MIN_Y_INCREASE = 3
 MAX_Y_INCREASE = 6
-WHITE = 'white''
+WHITE = 'white'
 BLACK = 'black'
 RED = 'red'
 YELLOW = 'yellow'
@@ -82,5 +82,109 @@ for i in range(numberOfSegmentsToDelete):
 
         pointsToDelete = [(startx, starty)]
 
+        canDeleteSegment = True
+        if orientation == 'vertical':
+            # Go up one path from the start point, and
+            # see if we can remove this segment:
+            for changey in (-1, 1):
+                y = starty
+                while 0 < y < height - 1:
+                    y += changey
+                    if (canvas[(startx - 1, y)] == BLACK and
+                        canvas[(startx + 1, y)] == BLACK):
+                    # We've found a four-way intersection
+                        break
+                    elif ((canvas[(startx - 1, y)] == WHITE and
+                        canvas[(startx + 1, y)] == BLACK) or
+                        (canvas[(startx - 1, y)] == BLACK and 
+                        canvas[(startx + 1, y)] == WHITE)):
+                        # We've found a T intersection; we can't
+                        # delete it
+                        canDeleteSegment = False
+                        break
+                    else:
+                        pointsToDelete.append((startx, y))
         
+        elif orientation == 'horizontal':
+            # Go up one path from the start point, and
+            # see if we can remove this segment:
+            for changex in (-1, 1):
+                x = startx
+                while 0 < x < width - 1:
+                    x += changex
+                    if (canvas[(x, starty - 1)] == BLACK and
+                        canvas[(x, starty + 1)] == BLACK):
+                    # We've found a four-way intersection
+                        break
+                    elif ((canvas[(x, starty - 1)] == WHITE and
+                        canvas[(x, starty + 1)] == BLACK) or
+                        (canvas[(x, starty - 1)] == BLACK and
+                        canvas[(x, starty + 1)] == WHITE)):
+                        # We've found a T intersection; we can't
+                        # delete it
+                        canDeleteSegment = False
+                        break
+                    else:
+                        pointsToDelete.append((x, starty))
+
+        if not canDeleteSegment:
+            continue # Get a random start point.
+        break # Move on to delete the segment
+    # if we can delete this segment, set all the points to white:
+    for x, y in pointsToDelete:
+        canvas[(x, y)] = WHITE
+
+    
+    # Add the border lines:
+    for x in range( width):
+        canvas[(x, 0)] = BLACK # Top border
+        canvas[(x, height - 1)] = BLACK # Bottom border
+    for y in range(height):
+        canvas[(0, y)] = BLACK # Left border
+        canvas[(width - 1, y)] = BLACK # Right border
+
+    # Paint the retangles
+    for i in range(numberOfRetanglesToPaint):
+        while True:
+            startx = random.randint(1, width - 2)
+            starty = random.randint(1, height- 2)
+
+            if canvas[(startx, starty)] != WHITE:
+                continue # Get a new random start point
+            else:
+                break
+
+    # Flood fill algorithm:
+    colorToPaint = random.choice([RED, YELLOW, BLUE, BLACK])
+    pointsToPaint = set([(startx, starty)])
+    while len(pointToPaint) > 0:
+        x, y = pointsToPaint.pop()
+        canvas[(x,y)] = colorToPaint
+        if canvas[(x - 1, y)] == WHITE:
+            pointsToPaint.add((x - 1, y))
+        if canvas[(x + 1, y)] == WHITE:
+            pointsToPaint.add((x + 1, y))
+        if canvas[(x, y - 1)] == WHITE:
+            pointsToPaint.add((x, y - 1))
+        if canvas[(x, y + 1)] == WHITE:
+            pointsToPaint.add((x, y + 1))
+
+    # Draw the canvas data structure
+    for y in range(height):
+        for x in range(width):
+            bext.bg(canvas[(x, y)])
+            print(' ',end = '')
+
+        print()
+    
+    # Prompt user to create a new one:
+    try:
+        input('Press Enter for another work of art, or CTRL-C to quit.')
+    except KeyboardInterrupt:
+        sys.exit()
+
+
+
+
+
 
