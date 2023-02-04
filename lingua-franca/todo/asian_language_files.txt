@@ -1,0 +1,17 @@
+arabic.txt
+arabic.txt:Zone.Identifier
+bengali.txt
+bengali.txt:Zone.Identifier
+chinese.txt
+hebrew.txt
+hebrew.txt:Zone.Identifier
+hindi.txt
+hindi.txt:Zone.Identifier
+japanese.txt
+japanese.txt:Zone.Identifier
+korean.txt
+korean.txt:Zone.Identifier
+malay.txt
+malay.txt:Zone.Identifier
+punjabi.txt
+punjabi.txt:Zone.Identifier

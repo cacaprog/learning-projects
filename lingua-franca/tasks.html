@@ -1,0 +1,112 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="task-group-1-navigating-the-file-system">Task Group 1: Navigating the File System</h2>
+<p>The file structure for this project consists of language files ending in <code>.txt</code> grouped under various sub-directories taking the name of continents.  There is a separate sub-directory called <strong>todo</strong> which also contains language files grouped under continent names.</p>
+<p>For example, a top-level view would give you this:</p>
+<pre><code>africa<span class="hljs-regexp">/  asia/</span>  europe<span class="hljs-regexp">/  northamerica/</span>  southamerica<span class="hljs-regexp">/  spanish.txt  todo/</span>
+</code></pre><p>A sub-directory view would give you this: </p>
+<pre><code>./asia:
+arabic<span class="hljs-selector-class">.txt</span>  hebrew<span class="hljs-selector-class">.txt</span>  hindi<span class="hljs-selector-class">.txt</span>  japanese<span class="hljs-selector-class">.txt</span>  korean<span class="hljs-selector-class">.txt</span>  malay.txt
+</code></pre><p>The <strong>todo</strong> sub-directory view would appear like this:</p>
+<pre><code>./<span class="hljs-string">todo:</span>
+africa<span class="hljs-regexp">/  asia/</span>  europe/
+</code></pre><h3 id="task-1">Task 1</h3>
+<p>Navigate to the <strong>lingua-franca/</strong> project directory in your own file system.</p>
+<h3 id="task-2">Task 2</h3>
+<p>Print the working directory.</p>
+<h3 id="task-3">Task 3</h3>
+<p>List the content of the current working directory.</p>
+<h3 id="task-4">Task 4</h3>
+<p>Make a new directory, <code>world</code>, in the current directory.</p>
+<h3 id="task-5">Task 5</h3>
+<p>Create a new file, <strong>esperanto.txt</strong> in the <strong>world</strong> directory and list the content of the <strong>world</strong> directory.</p>
+<h2 id="task-group-2-viewing-and-changing-the-file-system">Task Group 2: Viewing and Changing the File System</h2>
+<h3 id="task-6">Task 6</h3>
+<p>List all the contents of the current working directory based on the following constraints:</p>
+<ul>
+<li>content must include hidden files and directories</li>
+<li>content must appear in long format </li>
+<li>content must be sorted based on the time they were last modified. </li>
+</ul>
+<p>Which directory would appear first?</p>
+<h3 id="task-7">Task 7</h3>
+<p>List the content of the <strong>europe</strong> directory.  Notice that a file, <strong>chinese.txt</strong> doesn&#39;t belong there. Move that file to the correct directory, <strong>asia</strong>. </p>
+<h3 id="task-8">Task 8</h3>
+<p>List the current working directory.  Notice that the file <strong>spanish.txt</strong> needs to be categorized somewhere. Copy it to the following directories: <strong>europe</strong>, <strong>northamerica</strong>, and <strong>southamerica</strong>. Then remove it from the current directory.</p>
+<h5 id="hint">Hint</h5>
+<p><sup>
+With the <code>cp</code> command, you can copy multiple files to a single directory but not a single file to multiple directories. Hence, you have to execute the <code>cp</code> command separately for each directory.
+</sup></p>
+<h3 id="task-9">Task 9</h3>
+<p>A directory called <strong>todo</strong> contains subdirectories of continents with language files in them. List the contents of the directory, <strong>todo/*</strong>. </p>
+<h3 id="task-10">Task 10</h3>
+<p>Please copy these files to their appropriate locations under the current top-level directory. </p>
+<h5 id="hint">Hint</h5>
+<p><sup>
+All the files under <strong>todo/africa/</strong> should be copied to <strong>africa</strong>. Use the <code>*</code> character as a wildcard to select all files in a directory when you copy them.
+</sup></p>
+<h3 id="task-11">Task 11</h3>
+<p>Then remove all the files and directories of <strong>todo/</strong> excluding the <code>todo</code> directory in one step.</p>
+<h2 id="task-group-3-redirecting-input-and-output">Task Group 3: Redirecting Input and Output</h2>
+<h3 id="task-12">Task 12</h3>
+<p>List all the files in the <strong>asia/</strong> directory and save it in a file, <strong>asian_language_files.txt</strong> in the <strong>todo/</strong> directory.</p>
+<h5 id="hint">Hint</h5>
+<p><sup>
+You can use the <code>ls</code> command along with the <code>&gt;</code> redirect symbol.
+</sup></p>
+<h3 id="task-13">Task 13</h3>
+<p>Instead of writing the contents of a file  with a file editor, echo the following statement, <code>Welkom by die Lingua Franca vertaaldienste.</code> into the file <strong>afrikaans.txt</strong> in the <strong>africa</strong> directory.</p>
+<h5 id="hint">Hint</h5>
+<p><sup>
+Use the <code>echo</code> command and the redirect <code>&gt;</code> symbol. For example:</p>
+<pre><code><span class="hljs-built_in">echo</span> <span class="hljs-string">"hello"</span> &gt; hello.txt
+</code></pre><p></sup></p>
+<h3 id="task-14">Task 14</h3>
+<p>Some of the files in our project which end with the suffix, <strong>.txt</strong>, have no content in them. List the files, across all the continent directories, that end with <strong>.txt</strong> that have no content and save the listing in a file, <strong>empty_files.txt</strong>, in the <strong>todo/</strong> directory.</p>
+<h5 id="hint">Hint</h5>
+<p><sup>
+When a file has no content, there should be a word count of 0! You can use a combination of the <code>wc</code> and <code>grep</code> commands via a pipe <code>|</code> and redirect the final  output with the <code>&gt;</code> symbol. Make use of the wildcard <code>*</code> to select all the <strong>.txt</strong> files from all the directories.
+</sup></p>
+<h3 id="task-15">Task 15</h3>
+<p>Display the content of <strong>todo/empty_files.txt</strong> to list all the empty files across all the continent directories. </p>
+<h3 id="task-16">Task 16</h3>
+<p>The name of our translation service is <code>Lingua Franca</code>, however some of the files mistakenly spell it as <code>Lingua-Franca</code>. Replace the string &#39;Lingua-Franca&#39; with &#39;Lingua Franca&#39; in all occurrences in all the <strong>.txt</strong> files. </p>
+<p>Check your work using this command, confirming that there are 0 occurrences of <code>Lingua-Franca</code> across all text files:</p>
+<pre><code><span class="hljs-attribute">grep</span> -Rl <span class="hljs-string">'Lingua-Franca'</span> */<span class="hljs-regexp">*.txt</span> | wc -l
+</code></pre><h5 id="hint">Hint</h5>
+<p><sup>
+Use the <code>sed</code> command with the <code>-i</code> option. For example, to replace the typo &quot;hellw&quot; with &quot;hello&quot; in a text file called <strong>hello_world.txt</strong>, you would use the following command:</p>
+<pre><code>sed -<span class="hljs-selector-tag">i</span> <span class="hljs-string">'s/hellw/hello/g'</span> hello_world.txt
+</code></pre><p></sup></p>
+<h2 id="task-group-4-configuring-the-environment">Task Group 4: Configuring the Environment</h2>
+<h3 id="task-17">Task 17</h3>
+<p>Create and open the bash profile with your favorite editor.</p>
+<h3 id="task-18">Task 18</h3>
+<p>In the bash profile, add a greeting of your choice.
+Save the bash profile, exit nano, and clear the terminal window. </p>
+<h3 id="task-19">Task 19</h3>
+<p>Source the bash profile to make the greeting available in the current session. You should see the greeting you creating in the above step.</p>
+<h3 id="task-20">Task 20</h3>
+<p>Open the bash profile, and create three aliases:</p>
+<ul>
+<li><code>md</code>  for the <code>mkdir</code> command</li>
+<li><code>d</code> for <code>date</code></li>
+<li><code>hy</code> for <code>history</code></li>
+</ul>
+<p>Save the bash profile, exit nano, and clear the terminal window. </p>
+<h3 id="task-21">Task 21</h3>
+<p>Source the bash profile to make the aliases available in the current session.</p>
+<h3 id="task-22">Task 22</h3>
+<p>Test out the aliases you created for the <code>mkdir</code>, <code>date</code>, and <code>history</code> commands. (Recall that when you test out the alias for <code>mkdir</code> you will need to pass in a directory name as an argument such as <code>translations</code>.) After testing out the <code>mkdir</code> alias, list the directory created.</p>
+<h3 id="task-23">Task 23</h3>
+<p>Open the bash profile. Create and export the <code>PS1</code> environment variable, setting it equal to a prompt of your choice. Be sure to leave a space before the close of the quotations.</p>
+<p>Save the bash profile, exit nano, and clear the terminal window. </p>
+<h3 id="task-24">Task 24</h3>
+<p>Source the bash profile to make the new prompt available in the current session.</p>
+<h3 id="task-25">Task 25</h3>
+<p>Test out the prompt by typing the names of the aliases you created. Remember to list the directory created from the <code>mkdir</code> alias.</p>
+<h3 id="task-26">Task 26</h3>
+<p>Last, but not least, return a list of environment variables.</p>
+<p>Congratulations on completing this project! You have just completed a series of meaningful commands in your own terminal. The next time you download a project to work on, you can use the command line to easily maneuver between locations, and set up your personal coding environment. </p>
+</body></html>
