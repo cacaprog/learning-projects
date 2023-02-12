@@ -82,13 +82,14 @@ The lack of conservation_status for hugh number os species is a problem.
 
 # Findings
 
-### What is the distribution of conservation status for species?
+### What is the distribution of conservation status for animals?
 
 Despite the lack of information for all species, we could observe:
-- 80% of animals are species of concern
-- 10% are endangered
-- 6% are threatened
-- Only 2% in recovery
+- 86% of animals  have not intervention
+- 10% of animals are species of concern
+- 1% are endangered
+- Less than 1% are threatened
+- Less than 1% are in recovery
 
 ### Are certain types of species more likely to be endangered?
 
@@ -104,39 +105,17 @@ Two of all species observed are not in danger: reptile and nonvascular plants.
 
 ### Are the differences between species and their conservation status significant?
 
-To do list:
-- Substituir os NaN por not_protected
-- contingency table
-- chi-square test
+Mammals and Bird have the most % of protected species in dataset (17% and 15% respectly) but those two variables are independent.
 
+Mammals and Reptiles have a significant relationship.
 
+### Which specie is most prevalent and what is their distribution amongst parks?
 
-facegrid
-pivot table
-heatmap
+Bat are the most prevalent specie in dataset.
 
-There are 4 conservation status: endangered, in recovery, species of concern and threatened.
-- All categories have data for 'Species of Concern'
-- 'In Recovery' only for Bird category
-- Maybe, that data is not complete yeat, the species are under observation for update.
-
-
-### Which animal is most prevalent and what is their distribution amongst parks?
-
-To do list:
-- separar os commons names
-- avaliar quais aparecem mais
-- distribuição desta espécie pelos parques
-
-The number os species categories spotted the most per park:
-
-- Bryce National Park: Mammal, Bird
-- Great Smoky Mountains National Park: Mammal, Vascular Plant
-- Yellowstone National Park: Mammal, Bird, Vascular Plant
-- Yosemite National Park: Mammal, Bird, Vascular Plant
-
-heatmap
-pivot table
-
-
+Park    Observations
+Yellowstone National Park: 4584
+Yosemite National Park:	2657
+Bryce National Park: 1811
+Great Smoky Mountains National Park: 1355
 
