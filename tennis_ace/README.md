@@ -4,11 +4,9 @@ No three words are sweeter to hear as a tennis player than those, which indicate
 
 Provided in tennis_stats.csv is data from the men’s professional tennis league, which is called the ATP (Association of Tennis Professionals). Data from the top 1500 ranked players in the ATP over the span of 2009 to 2017 are provided in file. The statistics recorded for each player in each year include service game (offensive) statistics, return game (defensive) statistics and outcomes. 
 
-1. Load the csv into a DataFrame and investigate it to gain familiarity with the data.
 
-Player
-438 unique - os nomes se repetem, pois mostra os resultados do jogador pelos anos
-Year: 2009 a 2017
+# Tasks
+1. Load the csv into a DataFrame and investigate it to gain familiarity with the data.
 
 **Identifying Data**
 
@@ -63,16 +61,25 @@ The best score is **BreakPointsOpportunities** feature: 0.8584159345512928
 6. Create a few linear regression models that use two features to predict yearly earnings. 
 Which set of two features results in the best model?
 
-The pair 'BreakPointsOpportunities' and 'DoubleFaults' features has the higher score: 0.8658453190647725
+The pair 'BreakPointsOpportunities' and 'DoubleFaults' features has the higher score: 0.8517329795329184
 The weight of each feature:
-    BreakPointsOpportunities: 1450.27053414
-    DoubleFaults: 944.50422027
+    BreakPointsOpportunities: 1441.47788731
+    DoubleFaults: 941.24773496
+
+# ! revisar os números no fechamento do arquivo
 
 7. Create a few linear regression models that use multiple features to predict yearly earnings. Which set of features results in the best model?
 
-
-
 Head to the Codecademy forums and share your set of features that resulted in the highest test score for predicting your outcome. What features are most important for being a successful tennis player?
+
+The best model with five features scored 0.877509243663875
+The average earnings predicted is:  USD $ 224675.82590904357
+__ReturnGamesWon: -70777.7177545__
+BreakPointsOpportunities: 864.52994293
+__ServiceGamesWon: 86194.60977785__
+BreakPointsSaved: 5511.61584747
+Wins: 12798.36399854
+
 
 ### Solution
 
