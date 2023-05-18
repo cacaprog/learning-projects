@@ -1,3 +1,37 @@
+-- Question 1
+/*
+SELECT * 
+FROM chat
+LIMIT 10;
+
+SELECT * 
+FROM stream
+LIMIT 10;
+
+-- question 2
+select distinct game
+from stream
+where game is not null;
+
+
+-- question 3
+select distinct channel
+from stream;
+
+
+-- question 4
+select game, count(*) as viewers
+from stream
+group by 1
+order by 2 desc;
+
+-- question 5
+select country, count(*)
+from stream
+where game = 'League of Legends' and country is not null
+group by 1
+order by 2 desc;
+
 -- question 6
 /*
 select player
@@ -39,8 +73,10 @@ order by 2 desc;
 */
 
 -- question 11
+/*
 select * 
 from stream s
 join chat c
 	on s.device_id = c.device_id
 ;
+*/
