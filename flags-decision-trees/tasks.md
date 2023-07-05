@@ -36,7 +36,6 @@ labels = (df["landmass"].isin([3,6]))*1
 
 7. We will explore tuning the decision tree model by testing the performance over a range of max_depth values. Fit a decision tree classifier for max_depth values from 1-20. Save the accuracy score in for each depth in the list acc_depth.
 
-
 8. Plot the accuracy of the decision tree models versus the max_depth.
 
 9. Find the largest accuracy and the depth this occurs.
