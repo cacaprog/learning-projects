@@ -38,7 +38,8 @@ plt.clf()
 5. You’re now ready to evaluate this classifier! In the case of linear regression, we evaluated our models using mean-squared-error. For classifiers, it is important that the classifier not only has high accuracy, but also high precision and recall, i.e., a low false positive and false negative rate.
 
 A metric known as f1 score, which is the weighted mean of precision and recall, captures the performance of a classifier holistically. It takes values between 0 and 1 and the closer it is to 1, the better the classifier. Use f1_score() to calculate the f1 score for the training and test data.
-Logistic Regression with L2 Regularization
+
+**Logistic Regression with L2 Regularization**
 
 6. We’ve seen in the previous article that the default implementation of logistic regression in scikit-learn is ridge-regularized! Use the default implementation to implement a classifier clf_default that is L2-regularized.
 
@@ -46,7 +47,10 @@ Logistic Regression with L2 Regularization
 
 8. The scores remain the same! Does this mean that regularization did nothing? Indeed! This means that the constraint boundary for the regularization we performed is large enough to hold the original loss function minimum, thus rendering our model the same as the unregularized one.
 
-How can we tune up the regularization? Recall that C is the inverse of the regularization strength (alpha), meaning that smaller values of C correspond to more regularization. The scikit-learn default for C is 1; therefore, in order to increase the amount of regularization, we need to consider values of C that are less than 1. But how far do we need to go? Let’s try a coarse-grained search before performing a fine-grained one.
+How can we tune up the regularization? 
+Recall that C is the inverse of the regularization strength (alpha), meaning that smaller values of C correspond to more regularization. 
+The scikit-learn default for C is 1; therefore, in order to increase the amount of regularization, we need to consider values of C that are less than 1. But how far do we need to go? 
+Let’s try a coarse-grained search before performing a fine-grained one.
 
 Define an array, C_array that takes the values C_array = [0.0001, 0.001, 0.01, 0.1, 1]. Get an array each for the training and test scores corresponding to these values of C.
 
@@ -72,7 +76,9 @@ Let’s first get setup with the right inputs for this. Use np.logspace() to obt
 13. The score you got above reflects the mean f1-score on the 5 folds corresponding to the best classifier. Notice however that we haven’t yet used the test data, X_test, y_test from our original train-test split! This was done with good reason: the original test data can now be used as our validation dataset to validate whether our “best classifier” is doing as well as we’d like it to on essentially unknown data.
 
 Define a new classifier clf_best_ridge that corresponds to the best C value you obtained in the previous task. Fit it to the training data and obtain the f1_score on the test data to validate the model.
-Feature Selection using L1 Regularization
+
+
+**Feature Selection using L1 Regularization**
 
 14. We’re now going to use a grid search cross-validation method to regularize the classifier, but with L1 regularization instead. Instead of using GridSearchCV, we’re going to use LogisticRegressionCV. The syntax here is a little different. The arguments to LogisticRegressionCV that are relevant to us:
 
