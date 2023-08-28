@@ -24,6 +24,9 @@ OUTROS      3%
 1. Qual foi o % de aproveitamento da base?
 Menos de 1% de conversão da base em vendas
 
+![](/graph/funnel.png)
+
+
 Por qual motivo não houve mais conversões?
 
 82% das não conversões são genéricas e diretamente ligadas ao trabalho do corretor (ou a falta dele no processo):
@@ -34,11 +37,20 @@ Se analisarmos as características do imóvel, elas não influenciaram tanto a n
 4.39% - localização
 0.51% - metragem
 
+![](/graph/motivos_nao_conversao.png)
+
+
 2. Qual canal obteve o melhor aproveitamento?
 
 95% dos leads vieram do FB, Zap e Viva Real.
 
+![](/graph/leads_canal.png)
+
+
 Viva Real foi o segundo canal em % de leads gerados, mas trouxe o maior volume de negócios.
+
+
+![](/graph/vendas_canal.png)
 
 
 3. Qual foi o retorno do marketing?
@@ -46,6 +58,10 @@ Viva Real foi o segundo canal em % de leads gerados, mas trouxe o maior volume d
 Google obteve (de longe) o melhor ROAS com 122.
 Viva Real obteve 50% do ROAS entregue pelo Google.
 Já o Facebook (e Instagram) responderam por apenas 12% do ROAS entregue pelo Google.
+
+
+![](/graph/roas_canal.png)
+
 
 ### Descobertas
 
