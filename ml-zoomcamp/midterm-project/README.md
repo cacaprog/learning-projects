@@ -1,7 +1,11 @@
 ### Problem
-Is that a positive music?
-Let's create a prediction model to find out the level of positiveness of a music.
+My friend is DJ and gonna play at a party.
+Spotify have huge music library, but how to choose the best tracks for that party?
 
+
+### Solution
+To help him, I created a prediction model to show if that track is good to play,
+if that music act as positive conductor!
 
 ### Dataset
 
@@ -34,4 +38,7 @@ source: https://www.kaggle.com/datasets/sujaykapadnis/spotify-songs/data
 - valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a - track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while - tracks with low valence sound more negative (e.g. sad, depressed, angry).
 - tempo: The overall estimated tempo of a track in beats per minute (BPM). In musical - terminology, tempo is the speed or pace of a given piece and derives directly from the average - beat duration.
 - duration_ms: Duration of song in milliseconds
+
+### Docker container with all files and dependencies to run the model
+https://hub.docker.com/repository/docker/cacaprog/music-track-app/general
 
