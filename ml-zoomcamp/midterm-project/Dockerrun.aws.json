@@ -1,0 +1,13 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "cacaprog/music-track-app:latest",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "5000"
+    }
+  ]
+}
+
