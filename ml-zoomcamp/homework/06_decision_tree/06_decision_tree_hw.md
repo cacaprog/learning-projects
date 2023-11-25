@@ -39,9 +39,7 @@ Which feature is used for splitting the data?
 > Nenhuma destas opções apareceu no meu código
 
 - `ocean_proximity`
-- `total_rooms`
-- `latitude`
-- `population`
+
 
 ## Question 2
 
@@ -79,7 +77,7 @@ Let's select the best `max_depth`:
 
 What's the best `max_depth`:
 
-- 25
+- 20
 
 # Question 5
 
