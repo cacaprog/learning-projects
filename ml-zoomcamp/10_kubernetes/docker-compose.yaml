@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  clothing-model: # tf-serving model
+    image: clothing-model:xception-v4-001
+  gateway: # flask gateway service
+    image: clothing-model-gateway:002 # new version
+    environment:
+      - TF_SERVING_HOST=clothing-model:8500 # look for clothing model and port 8500
+    ports: # map host machine with gateway
+      - "9696:9696"
