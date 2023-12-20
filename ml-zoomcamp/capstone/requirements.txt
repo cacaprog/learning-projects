@@ -1,0 +1,7 @@
+Flask==3.0.0
+keras==2.15.0
+numpy==1.26.2
+Pillow==10.1.0
+Requests==2.31.0
+tensorflow==2.15.0.post1
+tflite_runtime==2.14.0
