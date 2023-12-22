@@ -74,5 +74,5 @@ We use a Convolutional Neural Network (CNN) with ResNet architecture for this bi
         This endpoint is configured to interact with the Glasses Classification Model.
 
 2. **Run the Test Script**
-   - Execute the test.py file locally.
+   - Execute `python test.py` file locally.
         This script is designed to send a request to the AWS Lambda function and receive the classification results.
