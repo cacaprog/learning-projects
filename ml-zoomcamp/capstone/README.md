@@ -66,11 +66,13 @@ We use a Convolutional Neural Network (CNN) with ResNet architecture for this bi
 6. **Send and View the Response**
    - Click `Send`. The server's response, including status code and response body, will be displayed in Postman.
 
+
 ### Testing with ECR Lambda
-    **Access the AWS Lambda Function**
-   -  Use the provided AWS Lambda endpoint: https://n06i2rjuk0.execute-api.us-east-1.amazonaws.com/test.
+
+1. **Access the AWS Lambda Function**
+   - Use the provided AWS Lambda endpoint: https://n06i2rjuk0.execute-api.us-east-1.amazonaws.com/test.
         This endpoint is configured to interact with the Glasses Classification Model.
 
-    **Run the Test Script**
-    - Execute the test.py file locally.
+2. **Run the Test Script**
+   - Execute the test.py file locally.
         This script is designed to send a request to the AWS Lambda function and receive the classification results.
